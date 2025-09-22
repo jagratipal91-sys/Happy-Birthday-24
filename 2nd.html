@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Celebration</title>
+  <style>
+    body {
+      margin: 0;
+      background: radial-gradient(circle, #000000, #111111, #222222);
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      color: white;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 3em;
+      animation: glow 1.5s infinite alternate;
+      z-index: 20;
+    }
+    @keyframes glow {
+      from {text-shadow: 0 0 10px #ff0055;}
+      to {text-shadow: 0 0 40px #00ffcc;}
+    }
+
+    /* Fireworks */
+    .firework {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      box-shadow: 0 0 20px #fff;
+      animation: explode 2s infinite;
+    }
+    @keyframes explode {
+      0% {transform: scale(0);}
+      100% {transform: scale(12); opacity: 0;}
+    }
+
+    /* Confetti */
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      top: -10px;
+      animation: fall 5s linear infinite;
+    }
+    @keyframes fall {
+      0% {transform: translateY(0) rotate(0);}
+      100% {transform: translateY(100vh) rotate(720deg);}
+    }
+
+    /* Balloons */
+    .balloon {
+      position: absolute;
+      bottom: -100px;
+      width: 40px;
+      height: 60px;
+      border-radius: 50% 50% 50% 50%;
+      animation: float 10s linear infinite;
+    }
+    @keyframes float {
+      0% {transform: translateY(0);}
+      100% {transform: translateY(-120vh);}
+    }
+
+    /* Stars */
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: white;
+      border-radius: 50%;
+      animation: twinkle 2s infinite alternate;
+    }
+    @keyframes twinkle {
+      from {opacity: 0.2;}
+      to {opacity: 1;}
+    }
+
+    /* Button */
+    button {
+      margin-top: 60px;
+      background: #00ffcc;
+      color: black;
+      padding: 15px 30px;
+      border: none;
+      font-size: 1.2em;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s;
+      z-index: 20;
+    }
+    button:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>🎆 Happy Birthday, Om! 🎆</h1>
+  <h2> You know ,You don't have any idea about how much you meant to me</h2>
+
+  <!-- Birthday Song -->
+  <audio autoplay loop>
+    <source src="happybirthday.mp3" type="audio/mpeg">
+    Your browser does not support audio.
+  </audio>
+
+  <!-- Fireworks -->
+  <div class="firework" style="top:30%;left:40%;background:#ff0000;animation-delay:0s;"></div>
+  <div class="firework" style="top:50%;left:60%;background:#00ff00;animation-delay:0.5s;"></div>
+  <div class="firework" style="top:70%;left:30%;background:#0000ff;animation-delay:1s;"></div>
+  <div class="firework" style="top:20%;left:70%;background:#ffff00;animation-delay:1.5s;"></div>
+  <div class="firework" style="top:60%;left:20%;background:#ff00ff;animation-delay:2s;"></div>
+
+  <!-- Confetti -->
+  <div class="confetti" style="left:10%;background:#ff0000;animation-delay:0s;"></div>
+  <div class="confetti" style="left:20%;background:#00ff0 0;animation-delay:1s;"></div>
+  <div class="confetti" style="left:30%;background:#0000ff;animation-delay:2s;"></div>
+  <div class="confetti" style="left:40%;background:#ffff00;animation-delay:3s;"></div>
+  <div class="confetti" style="left:50%;background:#ff00ff;animation-delay:4s;"></div>
+  <div class="confetti" style="left:60%;background:#00ffff;animation-delay:2.5s;"></div>
+  <div class="confetti" style="left:70%;background:#ff6600;animation-delay:1.5s;"></div>
+  <div class="confetti" style="left:80%;background:#66ff00;animation-delay:0.5s;"></div>
+
+  <!-- Balloons -->
+  <div class="balloon" style="left:15%;background:#ff6666;animation-delay:0s;"></div>
+  <div class="balloon" style="left:35%;background:#66ff66;animation-delay:2s;"></div>
+  <div class="balloon" style="left:55%;background:#6666ff;animation-delay:4s;"></div>
+  <div class="balloon" style="left:75%;background:#ffcc66;animation-delay:6s;"></div>
+
+  <!-- Stars -->
+  <div class="star" style="top:10%;left:20%;animation-delay:0s;"></div>
+  <div class="star" style="top:30%;left:80%;animation-delay:1s;"></div>
+  <div class="star" style="top:60%;left:50%;animation-delay:2s;"></div>
+  <div class="star" style="top:80%;left:10%;animation-delay:1.5s;"></div>
+  <div class="star" style="top:90%;left:70%;animation-delay:2.5s;"></div>
+
+  <!-- Next Button -->
+  <a href="3rd.html"><button>Next ➡️</button></a>
+</body>
+</html>

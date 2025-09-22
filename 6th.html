@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sorry!</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ff6a6a, #ffb6b6);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+      padding: 50px;
+      animation: fadeSlide 2s ease-in;
+    }
+    h1 {
+      font-size: 3em;
+      color: #ff0000;
+      animation: shake 1s infinite;
+    }
+    p {
+      font-size: 1.3em;
+      color: #333;
+    }
+    @keyframes fadeSlide {
+      from {opacity: 0; transform: translateY(50px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes shake {
+      0%, 100% {transform: translateX(0);}
+      25% {transform: translateX(-10px);}
+      50% {transform: translateX(10px);}
+      75% {transform: translateX(-10px);}
+    }
+  </style>
+</head>
+<body>
+  <h1>Sorry 😔</h1>
+  <p>I failed in making you feel happy and special. I will try harder next time! 💖</p>
+</body>
+</html>
